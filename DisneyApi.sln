@@ -5,7 +5,7 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisneyApi", "DisneyApi.csproj", "{AA270AEA-BE14-4531-9097-811B785D6ACB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DsineyApiTest", "..\DsineyApiTest\DsineyApiTest.csproj", "{70283320-6C10-4DB6-BE27-38F99493957C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisneyApiTest", "..\DsineyApiTest\DisneyApiTest.csproj", "{70283320-6C10-4DB6-BE27-38F99493957C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
