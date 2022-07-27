@@ -11,7 +11,7 @@ namespace DisneyApi.Controllers
 {
     [Route("[Controller]")]
     [ApiController]
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 
     public class CharactersController : ControllerBase
     {

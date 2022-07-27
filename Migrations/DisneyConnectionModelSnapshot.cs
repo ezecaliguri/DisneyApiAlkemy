@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DisneyApi.Migrations
+namespace DisneyApiAlkemy.Migrations
 {
     [DbContext(typeof(DisneyConnection))]
     partial class DisneyConnectionModelSnapshot : ModelSnapshot

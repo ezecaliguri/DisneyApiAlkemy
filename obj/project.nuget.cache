@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B2QsbQI6TMPEB3aawazkbHyVun3lpKvU82YNwkuUrJAZpBS8dU4yI9kobz/eENh0K8pCZPlInd8DPTJ5sOFGRA==",
+  "dgSpecHash": "5tr7hnImSf6CNDzX4bFj6/HO91MRdY29bHKqKnMvP4Pum16N/mNEgdhk61LecZMpJ10O4XMvPlaHTynaP1NOLg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eze\\source\\repos\\checkOutDisney\\DisneyApi\\DisneyApiAlkemy\\DisneyApiAlkemy.csproj",
+  "projectFilePath": "C:\\Users\\Eze\\source\\DisneyApi\\DisneyApiAlkemy\\DisneyApiAlkemy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eze\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Eze\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
