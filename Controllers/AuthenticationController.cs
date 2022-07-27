@@ -16,11 +16,13 @@ namespace ApiGeo.Controllers
     {
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
+        private readonly IConfiguration _configuration;
 
-        public AuthenticationController(UserManager<User> userManager, SignInManager<User> signInManager)
+        public AuthenticationController(UserManager<User> userManager, SignInManager<User> signInManager, IConfiguration configuration)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _configuration = configuration; 
         }
 
 
@@ -46,7 +48,7 @@ namespace ApiGeo.Controllers
 
             // envia un email de registro con los datos del usuario via email
 
-            EmailService email = new();
+            EmailService email = new(_configuration);
             await email.SendRegisterEmail(model.Email, model.UserName, model.Password);
 
             return Ok("El usuario se registro con exito!");
@@ -94,14 +96,14 @@ namespace ApiGeo.Controllers
 
             var stringToken = new JwtSecurityTokenHandler().WriteToken(token);
 
-            EmailService loginEmail = new();
+            EmailService loginEmail = new(_configuration);
             await loginEmail.SendLoginEmail(stringToken, token.ValidTo, currentUser.UserName, currentUser.Email);
 
             return new LoginResponse()
             {
                 Token = stringToken,
                 ValidTo = token.ValidTo,
-                Information = "These data were sent by email, se enviaron estos datos por email"
+                Information = "These data were sent by email | se enviaron estos datos por email"
             };
 
         }

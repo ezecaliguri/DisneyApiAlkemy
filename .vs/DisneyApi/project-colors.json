@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "aa270aea-be14-4531-9097-811b785d6acb": {
+      "ProjectGuid": "aa270aea-be14-4531-9097-811b785d6acb",
+      "DisplayName": "DisneyApi",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Archivos varios",
+      "ColorIndex": -1
+    },
+    "422fb82d-de4c-4e0b-ab6f-18911591316b": {
+      "ProjectGuid": "422fb82d-de4c-4e0b-ab6f-18911591316b",
+      "DisplayName": "DisneyApiTest",
+      "ColorIndex": 1
+    },
+    "70283320-6c10-4db6-be27-38f99493957c": {
+      "ProjectGuid": "70283320-6c10-4db6-be27-38f99493957c",
+      "DisplayName": "DisneyApiTest",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

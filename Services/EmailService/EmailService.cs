@@ -1,14 +1,26 @@
 ﻿using SendGrid;
 using SendGrid.Helpers.Mail;
+using Microsoft.Extensions.Configuration;
+using System.Configuration;
 
 namespace DisneyApi.Services.EmailService
 {
-    public class EmailService
+    public class EmailService 
     {
+        private readonly IConfiguration _configuration;
+        public EmailService(IConfiguration configuration)
+        {
+            _configuration = configuration;
+            
+        }
         public async Task SendRegisterEmail(string newUser,string name, string password)
         {
-            var client = new SendGridClient("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");
-            var from = new EmailAddress("ezecaliguri@gmail.com", "Bienvenido a la api de Disney");
+            var ApiKey = _configuration.GetSection("Key_SendGrid").Value;
+            var emailFrom = _configuration.GetSection("Email_from_SendGrid").Value;
+
+
+            var client = new SendGridClient(ApiKey);
+            var from = new EmailAddress(emailFrom, "Bienvenido a la api de Disney");
             var subject = $"Gracias por Registrarse en la Api: {name} ";
             var to = new EmailAddress(newUser, "Nuevo usuario creado");
             var plainTextContent = "prueba api";
@@ -19,9 +31,12 @@ namespace DisneyApi.Services.EmailService
 
         public async Task SendLoginEmail(string token, DateTime validTo, string name, string email)
         {
+            var ApiKey = _configuration.GetSection("Key_SendGrid").Value;
+            var emailFrom = _configuration.GetSection("Email_from_SendGrid").Value;
+
             var validToArg = validTo.AddHours(-3);
-            var client = new SendGridClient("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");
-            var from = new EmailAddress("ezecaliguri@gmail.com", "Bienvenido a la api de Disney");
+            var client = new SendGridClient(ApiKey);
+            var from = new EmailAddress(emailFrom, "Bienvenido a la api de Disney");
             var subject = $"Gracias por logearse en la Api: {name} ";
             var to = new EmailAddress(email, "Login creado");
             var plainTextContent = "prueba api";
